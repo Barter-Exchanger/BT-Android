@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/UserImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="12dp"
+                            android:padding="4dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/search"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/UserNamme"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="username"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toTopOf="@+id/UserImage"
+                            app:layout_constraintStart_toEndOf="@+id/UserImage"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/subtitle_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="subhead"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toEndOf="@+id/UserImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@+id/UserImage" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    -->
+
+    <!-- Media -->
+    <!--<ImageView
+        android:id="@+id/good_image"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        app:srcCompat="@drawable/card"
+        android:scaleType="centerCrop"
+        android:contentDescription="image"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        -->
+
+    <!-- Title, secondary and supporting text -->
+    <!-- <TextView
+         android:id="@+id/label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Label"
+         android:textAppearance="?attr/textAppearanceHeadline6"
+         />
+     <TextView
+         android:id="@+id/description"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="8dp"
+         android:text="Description"
+         android:textAppearance="?attr/textAppearanceBody2"
+         android:textColor="?android:attr/textColorSecondary"
+         />
+     <TextView
+         android:id="@+id/location"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="16dp"
+         android:text="Location"
+         android:textAppearance="?attr/textAppearanceBody2"
+         android:textColor="?android:attr/textColorSecondary"
+         />
+
+ </LinearLayout>
+-->
+    <!-- Buttons -->
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Exchange demande"
+            style="?attr/borderlessButtonStyle"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show details"
+            style="?attr/borderlessButtonStyle"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+-->
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:paddingBottom="16dp"
+        android:background="@drawable/card_shape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/UserNamme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Title"
+            android:textColor="@color/title_text_color"/>
+
+        <ImageView
+            android:id="@+id/good_image"
+            android:layout_width="640px"
+            android:layout_height="360px"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignStart="@id/UserNamme"
+            android:layout_alignLeft="@id/UserNamme"
+            android:layout_below="@id/UserNamme"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/download"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="label"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignStart="@id/UserNamme"
+            android:layout_alignLeft="@id/UserNamme"
+            android:layout_below="@id/good_image"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/title_text_color"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignStart="@id/UserNamme"
+            android:layout_alignLeft="@id/UserNamme"
+            android:layout_below="@id/label"
+            android:layout_marginTop="8dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+            />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/UserNamme"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="location"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/content_text_color"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/UserImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

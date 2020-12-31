@@ -48,7 +48,8 @@
             android:layout_marginLeft="38dp"
             android:layout_marginTop="18dp"
             android:layout_marginRight="37dp"
-            android:text="Login" />
+            android:text="Login"
+            style="?attr/materialButtonOutlinedStyle"/>
 
         <Button
             android:id="@+id/signin_button"
@@ -57,7 +58,8 @@
             android:layout_marginLeft="38dp"
             android:layout_marginRight="37dp"
             android:text="Connect with facebook"
-            android:background="@drawable/fb_button"/>
+            android:background="@drawable/fb_button"
+            />
 
         <TextView
             android:layout_width="wrap_content"
