@@ -9,7 +9,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.esprit.barterexchange.Entities.CurrentUser;
+import com.esprit.barterexchange.Entities.Goods;
+import com.esprit.barterexchange.Services.GoodsServices;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -36,6 +41,20 @@ public class Navigation extends AppCompatActivity implements BottomNavigationVie
         fab.setOnClickListener(v ->{
             AlertDialog.Builder mBuild = new AlertDialog.Builder(v.getContext());
             View mView = getLayoutInflater().inflate(R.layout.add_good, null);
+
+            EditText goodName = mView.findViewById(R.id.good_name);
+            EditText imagePath = mView.findViewById(R.id.image_path);
+            EditText location = mView.findViewById(R.id.location);
+            Button uploadBtn = mView.findViewById(R.id.upload_btn);
+            EditText desc = mView.findViewById(R.id.desc);
+            Button addBtn = mView.findViewById(R.id.add_button);
+
+            addBtn.setOnClickListener(view ->{
+                GoodsServices gs = new GoodsServices();
+                gs.addGood(new Goods(CurrentUser.getId(), goodName.getText().toString(), desc.getText().toString(), imagePath.getText().toString(), location.getText().toString()));
+            });
+
+
             mBuild.setView(mView);
             AlertDialog dialog = mBuild.create();
             dialog.show();

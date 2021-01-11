@@ -11,6 +11,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.esprit.barterexchange.Entities.Publication;
+import com.esprit.barterexchange.Services.PublicationService;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 public class Home extends Fragment {
 
     View rootView;
@@ -18,12 +25,14 @@ public class Home extends Fragment {
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter adapter;
     RecyclerView recyclerView;
-    String[] names = {"john", "carley", "james", "rian"};
+    /*String[] names = {"john", "carley", "james", "rian"};
     String[] descriptions = {"some random text", "some random text", "some random text", "some random text"};
-    String[] location = {"new orleans", "california", "washingnon", "texas"};
-    String[] goodLabel = {"good label", "good label", "good label", "good label"};
-    int[] imgProfile = {R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile};
-    int[] imgGoods = {R.drawable.download, R.drawable.download, R.drawable.download, R.drawable.download};
+    String[] goodLabel = {"good label", "good label", "good label", "good label"};*/
+    String[] names, descriptions, goodLabel;
+    String[] location ;
+    int[] goodId;
+    int[] imgProfile = {R.drawable.profile, R.drawable.profile};
+    int[] imgGoods = {R.drawable.download, R.drawable.download};
 
     @Nullable
     @Override
@@ -36,7 +45,17 @@ public class Home extends Fragment {
         layoutManager = new LinearLayoutManager(rootView.getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        ProgramAdapter programAdapter = new ProgramAdapter(rootView.getContext(), names, descriptions, location, goodLabel, imgGoods, imgProfile);
+        PublicationService ps = new PublicationService();
+        ArrayList<Publication> publicationArrayList = ps.getPublications();
+
+        names = publicationArrayList.stream().map(p -> p.getUsername()).toArray(String[]::new);
+        descriptions = publicationArrayList.stream().map(p -> p.getGoodDescription()).toArray(String[]::new);
+        goodLabel = publicationArrayList.stream().map(p -> p.getGoodLabel()).toArray(String[]::new);
+        location = publicationArrayList.stream().map(p -> p.getLocation()).toArray(String[]::new);
+        goodId = publicationArrayList.stream().mapToInt(p -> p.getGoodId()).toArray();
+
+
+        ProgramAdapter programAdapter = new ProgramAdapter(rootView.getContext(), names, descriptions, location, goodLabel, imgGoods, imgProfile, goodId);
         recyclerView.setAdapter(programAdapter);
 
         return rootView;

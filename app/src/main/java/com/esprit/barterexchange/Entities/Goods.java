@@ -2,18 +2,18 @@ package com.esprit.barterexchange.Entities;
 
 public class Goods {
     int id, user;
-    String name, description, image;
+    String name, description, image, location;
 
     public Goods(){
 
     }
 
-    public Goods(int id, int user, String name, String description, String image) {
-        this.id = id;
+    public Goods(int user, String name, String description, String image, String location) {
         this.user = user;
         this.name = name;
         this.description = description;
         this.image = image;
+        this.location = location;
     }
 
     public int getId() {
@@ -56,7 +56,15 @@ public class Goods {
         this.image = image;
     }
 
-    @Override
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+   /* @Override
     public String toString() {
         return "Goods{" +
                 "id=" + id +
@@ -65,5 +73,10 @@ public class Goods {
                 ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -2,6 +2,6 @@ package com.esprit.barterexchange.Statics;
 
 public class Statics {
 
-    public static final String _GET_ALL_USERS = "192.168.154.1/";
+    public static final String _BASE_URL = "http://192.168.1.199:3000/";
 
 }

@@ -7,140 +7,6 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <!--
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:id="@+id/UserImage"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginStart="12dp"
-                            android:padding="4dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/search"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintVertical_chainStyle="packed" />
-
-                        <TextView
-                            android:id="@+id/UserNamme"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginEnd="16dp"
-                            android:text="username"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@+id/UserImage"
-                            app:layout_constraintStart_toEndOf="@+id/UserImage"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                        <TextView
-                            android:id="@+id/subtitle_text"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:text="subhead"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toEndOf="@+id/UserImage"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="@+id/UserImage" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    -->
-
-    <!-- Media -->
-    <!--<ImageView
-        android:id="@+id/good_image"
-        android:layout_width="match_parent"
-        android:layout_height="194dp"
-        app:srcCompat="@drawable/card"
-        android:scaleType="centerCrop"
-        android:contentDescription="image"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-        -->
-
-    <!-- Title, secondary and supporting text -->
-    <!-- <TextView
-         android:id="@+id/label"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="Label"
-         android:textAppearance="?attr/textAppearanceHeadline6"
-         />
-     <TextView
-         android:id="@+id/description"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="8dp"
-         android:text="Description"
-         android:textAppearance="?attr/textAppearanceBody2"
-         android:textColor="?android:attr/textColorSecondary"
-         />
-     <TextView
-         android:id="@+id/location"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="16dp"
-         android:text="Location"
-         android:textAppearance="?attr/textAppearanceBody2"
-         android:textColor="?android:attr/textColorSecondary"
-         />
-
- </LinearLayout>
--->
-    <!-- Buttons -->
-    <!--<LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="horizontal">
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="Exchange demande"
-            style="?attr/borderlessButtonStyle"
-            />
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="show details"
-            style="?attr/borderlessButtonStyle"
-            />
-    </LinearLayout>
-
-</LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>
--->
-
     <RelativeLayout
         android:id="@+id/container"
         android:paddingBottom="16dp"
@@ -207,6 +73,13 @@
             android:layout_marginTop="8dp"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
             />
+        <Button
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Demande request"
+            android:layout_below="@id/description"
+            android:layout_alignStart="@id/description"/>
 
         <TextView
             android:id="@+id/location"
@@ -237,5 +110,6 @@
         app:layout_constraintStart_toStartOf="@+id/container"
         app:layout_constraintTop_toTopOf="@+id/container"
         app:srcCompat="@mipmap/ic_launcher" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

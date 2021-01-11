@@ -1,15 +1,36 @@
 package com.esprit.barterexchange.Entities;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
 
-    int id;
-    String firstName, lastName, username, email, password;
+    @SerializedName("ID")
+    private int id;
+    @SerializedName("FirstName")
+    private String firstName;
+    @SerializedName("LastName")
+    private String lastName;
+    @SerializedName("email")
+    private String email;
+    @SerializedName("password")
+    private String password;
+    @SerializedName("Username")
+    private String username;
 
-    public User(){
+    public User() {
 
     }
 
     public User(int id, String firstName, String lastName, String username, String email, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(String firstName, String lastName, String username, String email, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
